@@ -1,0 +1,4 @@
+{% ckan_extends %}
+  {% block package_basic_fields_custom %}
+    {{ form.input('anzlic_id', label=_('Anzlic ID'), id='field-anzlic_id', placeholder=_('ANZLIC...'), value=data.anzlic_id, error=errors.anzlic_id, classes=['control-medium']) }}
+{% endblock %}
