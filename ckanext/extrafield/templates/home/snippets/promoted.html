@@ -1,22 +1,36 @@
 {% set intro = g.site_intro_text %}
 
-<div class="module-content box">
+<div class="module-content box hidden-phone">
   <header>
     {% if intro %}
       {{ h.render_markdown(intro) }}
     {% else %}
-      <h1 class="page-heading">{{ _("Welcome to CKAN") }}</h1>
+      <h1 class="page-heading">{{ _("Applications") }}</h1>
     {% endif %}
   </header>
-
-  {% block home_image %}
     <section class="featured media-overlay hidden-phone">
-      <h2 class="media-heading">{% block home_image_caption %}{{ _("Have a look at the Vicmap Data group") }}{% endblock %}</h2>
-      {% block home_image_content %}
-        <a class="media-image" href="/group/vicmap-data">
-          <img src="{{ h.url_for_static('base/images/vicmaplogo420x220.png') }}" alt="Vicmap Data" width="420" height="220" />
+      <h2 class="media-heading delwph">Spatial Datamart</h2>
+        <a class="media-image sdm" href="http://services.land.vic.gov.au/SpatialDatamart" target="_blank">
+	  <img src="http://services.land.vic.gov.au/SpatialDatamart/images/spatialDatamart-logo.png" alt="Datamart"/>
         </a>
-      {% endblock %}
     </section>
-  {% endblock %}
+    <section class="featured media-overlay hidden-phone">
+      <h2 class="media-heading delwph">Portal for ArcGIS</h2>
+        <a class="media-image" href="http://vm-api-01.aaa.depi.vic.gov.au/arcgis/home/" target="_blank">
+	  <img src="{{ h.url_for_static('base/images/Portal.JPG') }}" alt="Portal"/>
+        </a>
+    </section>
+    <section class="featured media-overlay hidden-phone">
+      <h2 class="media-heading delwph">Mapshare Gen3</h2>
+        <a class="media-image" href="http://is-prd-app-00.aaa.depi.vic.gov.au/gvh260isd/Index.html?viewer=MSG3_Site.gvh260viewer#" target="_blank">
+	  <img src="{{ h.url_for_static('base/images/mapshare.png') }}" alt="Mapshare"/>
+        </a>
+    </section>
+    <section class="featured media-overlay hidden-phone">
+      <h2 class="media-heading delwph">eMap</h2>
+        <a class="media-image" href="http://emap/gvs/?Viewer-State%20overview" target="_blank">
+	  <img src="{{ h.url_for_static('base/images/emap.png') }}" alt="eMap"/>
+        </a>
+    </section>
 </div>
+
