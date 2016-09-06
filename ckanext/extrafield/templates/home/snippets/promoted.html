@@ -1,6 +1,6 @@
 {% set intro = g.site_intro_text %}
 
-<div class="module-content box hidden-phone">
+<div class="module-content box">
   <header>
     {% if intro %}
       {{ h.render_markdown(intro) }}
@@ -8,6 +8,7 @@
       <h1 class="page-heading">{{ _("Applications") }}</h1>
     {% endif %}
   </header>
+<!--
     <section class="featured media-overlay hidden-phone">
       <h2 class="media-heading delwph">Spatial Datamart</h2>
         <a class="media-image sdm" href="http://services.land.vic.gov.au/SpatialDatamart" target="_blank">
@@ -32,5 +33,6 @@
 	  <img src="{{ h.url_for_static('base/images/emap.png') }}" alt="eMap"/>
         </a>
     </section>
+-->
 </div>
 
